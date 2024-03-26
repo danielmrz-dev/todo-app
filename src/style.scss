@@ -45,7 +45,7 @@ $Josefin-Sans: 'Josefin Sans', sans-serif;
 }
 
 body {
-    background: $Very-Light-Gray url('images/bg-mobile-light.jpg') no-repeat;
+    background: $Very-Light-Gray url('../images/bg-mobile-light.jpg') no-repeat;
     background-size: contain;
 
     .main {
@@ -90,7 +90,7 @@ body {
             position: relative;
 
             &:checked {
-                background-image: url('images/icon-check.svg'), $Check-Background;
+                background-image: url('../images/icon-check.svg'), $Check-Background;
                 background-size: 10px, contain;
                 background-repeat: no-repeat, no-repeat;
                 background-position: center, center;
@@ -165,18 +165,18 @@ body {
 }
 
 .dark-bg {
-    background: $Very-Dark-Desaturated-Blue url('images/bg-mobile-dark.jpg') no-repeat;
+    background: $Very-Dark-Desaturated-Blue url('../images/bg-mobile-dark.jpg') no-repeat;
     background-size: contain;
 
     @media screen and (min-width: 560px) {
-        background: $Very-Dark-Desaturated-Blue url('images/bg-desktop-dark.jpg') no-repeat;
+        background: $Very-Dark-Desaturated-Blue url('../images/bg-desktop-dark.jpg') no-repeat;
         background-size: contain;
     }
 }
 
 @media screen and (min-width: 560px) {
     body {
-        background: $Very-Light-Gray url('images/bg-desktop-light.jpg') no-repeat;
+        background: $Very-Light-Gray url('../images/bg-desktop-light.jpg') no-repeat;
         background-size: contain;
 
         .main {
