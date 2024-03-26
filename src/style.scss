@@ -144,6 +144,11 @@ body {
             font-weight: 700;
         }
 
+        .active-tasks {
+            color: $Bright-Blue;
+            font-weight: 900;
+        }
+
         &__drag-n-drop {
             color: $Grey;
             font-size: .8rem;

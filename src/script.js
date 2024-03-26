@@ -98,15 +98,29 @@ function loadTasks() {
     }
 }
 
+allTasksBtn.classList.add("active-tasks")
 allTasksBtn.addEventListener("click", () => {
     const allTasks = tasksContainer.querySelectorAll(".main__todo-list-item");
     allTasks.forEach((task) => {
         task.style.display = "flex";
     });
+    allTasksBtn.classList.add("active-tasks")
+    activeTasksBtn.classList.remove("active-tasks")
+    completedTasksBtn.classList.remove("active-tasks")
 });
 
-activeTasksBtn.addEventListener("click", () => filterTasks(false));
-completedTasksBtn.addEventListener("click", () => filterTasks(true));
+activeTasksBtn.addEventListener("click", () => {
+    filterTasks(false)
+    activeTasksBtn.classList.add("active-tasks")
+    allTasksBtn.classList.remove("active-tasks")
+    completedTasksBtn.classList.remove("active-tasks")
+});
+completedTasksBtn.addEventListener("click", () => {
+    filterTasks(true)
+    completedTasksBtn.classList.add("active-tasks")
+    allTasksBtn.classList.remove("active-tasks")
+    activeTasksBtn.classList.remove("active-tasks")
+});
 
 clearCompletedBtn.addEventListener("click", () => {
     const allTasksArray = Array.from(

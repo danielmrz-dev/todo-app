@@ -104,6 +104,10 @@ body .main__all-active-completed {
   font-size: 0.9rem;
   font-weight: 700;
 }
+body .main .active-tasks {
+  color: #3a7bfd;
+  font-weight: 900;
+}
 body .main__drag-n-drop {
   color: #adadad;
   font-size: 0.8rem;
