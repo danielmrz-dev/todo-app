@@ -6,7 +6,7 @@
 }
 
 body {
-  background: #fafafa url("images/bg-mobile-light.jpg") no-repeat;
+  background: #fafafa url("../images/bg-mobile-light.jpg") no-repeat;
   background-size: contain;
 }
 body .main__title {
@@ -62,7 +62,7 @@ body .main__todo-list-checkbox {
   position: relative;
 }
 body .main__todo-list-checkbox:checked {
-  background-image: url("images/icon-check.svg"), linear-gradient(to bottom, #57ddff, #c058f3);
+  background-image: url("../images/icon-check.svg"), linear-gradient(to bottom, #57ddff, #c058f3);
   background-size: 10px, contain;
   background-repeat: no-repeat, no-repeat;
   background-position: center, center;
@@ -120,19 +120,19 @@ body .attribution a:hover {
 }
 
 .dark-bg {
-  background: #25273c url("images/bg-mobile-dark.jpg") no-repeat;
+  background: #25273c url("../images/bg-mobile-dark.jpg") no-repeat;
   background-size: contain;
 }
 @media screen and (min-width: 560px) {
   .dark-bg {
-    background: #25273c url("images/bg-desktop-dark.jpg") no-repeat;
+    background: #25273c url("../images/bg-desktop-dark.jpg") no-repeat;
     background-size: contain;
   }
 }
 
 @media screen and (min-width: 560px) {
   body {
-    background: #fafafa url("images/bg-desktop-light.jpg") no-repeat;
+    background: #fafafa url("../images/bg-desktop-light.jpg") no-repeat;
     background-size: contain;
   }
   body .main {
