@@ -1,0 +1,259 @@
+@charset "UTF-8";
+
+$Bright-Blue: #3a7bfd;
+$Check-Background: linear-gradient(to bottom, #57ddff, #c058f3);
+
+// ### Light Theme
+
+$Very-Light-Gray: #fafafa;
+$Very-Light-Grayish-Blue: #e4e5f1;
+$Light-Grayish-Blue: #d2d3db;
+$Dark-Grayish-Blue: #9394a5;
+$Very-Dark-Grayish-Blue: #484b6a;
+$White: #fff;
+$Grey: #adadad;
+
+// ### Dark Theme
+
+$Very-Dark-Blue: #161722;
+$Very-Dark-Desaturated-Blue: #25273c;
+$Light-Grayish-Blue: #cacde8;
+$Light-Grayish-Blue-hover: #e4e5f1;
+$Dark-Grayish-Blue: #777a92;
+$Very-Dark-Grayish-Blue: #4d5066;
+$Very-Dark-Grayish-Blue: #393a4c;
+
+$Josefin-Sans: 'Josefin Sans', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $Josefin-Sans;
+}
+
+@mixin checkbox-appearance {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+body {
+    background: $Very-Light-Gray url('images/bg-mobile-light.jpg') no-repeat;
+    background-size: contain;
+
+    .main {
+        &__title {
+            text-transform: uppercase;
+            letter-spacing: 10px;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: $Very-Light-Gray;
+        }
+
+        &__circle {
+            @include checkbox-appearance();
+            left: 15px;
+        }
+
+        &__input {
+            font-size: .8rem;
+            padding-left: 2.75rem;
+        }
+
+        &__todo-list {
+            overflow: hidden;
+            background-color: $White;
+        }
+
+        &__todo-list-item {
+            font-size: .8rem;
+            border-bottom: 1px solid $Light-Grayish-Blue-hover;
+        }
+
+        .grey-container {
+            background-color: #2c2f51;
+            color: $Very-Light-Grayish-Blue;
+            font-weight: 400;
+            border-bottom: 1px solid rgba(100, 100, 100, 0.436);
+        }
+
+        &__todo-list-checkbox {
+            @include checkbox-appearance();
+            transform: translateY(-1px);
+            position: relative;
+
+            &:checked {
+                background-image: url('images/icon-check.svg'), $Check-Background;
+                background-size: 10px, contain;
+                background-repeat: no-repeat, no-repeat;
+                background-position: center, center;
+            }
+
+            &:checked+.main__todo-list-item-description {
+                text-decoration: line-through;
+                color: $Grey;
+            }
+        }
+
+        &__todo-list-item-label {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .line-through {
+            text-decoration: line-through;
+            color: $Grey;
+        }
+
+        .new-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 1.25rem 1.25rem 1rem;
+        }
+
+        .new-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        .new-description {
+            margin-right: auto;
+        }
+
+        &__todo-left-n-clear {
+            background-color: $White;
+            color: $Grey;
+            font-size: .9rem;
+        }
+
+        &__all-active-completed {
+            background-color: $White;
+            color: $Grey;
+            font-size: .9rem;
+            font-weight: 700;
+        }
+
+        &__drag-n-drop {
+            color: $Grey;
+            font-size: .8rem;
+            font-weight: 600;
+        }
+    }
+
+    .attribution {
+        color: $Dark-Grayish-Blue;
+
+        a {
+            color: $Bright-Blue;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.dark-bg {
+    background: $Very-Dark-Desaturated-Blue url('images/bg-mobile-dark.jpg') no-repeat;
+    background-size: contain;
+
+    @media screen and (min-width: 560px) {
+        background: $Very-Dark-Desaturated-Blue url('images/bg-desktop-dark.jpg') no-repeat;
+        background-size: contain;
+    }
+}
+
+@media screen and (min-width: 560px) {
+    body {
+        background: $Very-Light-Gray url('images/bg-desktop-light.jpg') no-repeat;
+        background-size: contain;
+
+        .main {
+            min-width: 530px;
+            margin: 4.7rem auto 0;
+            position: relative;
+            display: grid;
+
+            &__container {
+                gap: 1.5rem;
+                margin-bottom: 0;
+            }
+
+            &__title {
+                font-size: 2.5rem;
+                letter-spacing: 15px;
+            }
+
+            &__mode-icon {
+                width: auto;
+            }
+
+            &__circle {
+                @include checkbox-appearance();
+                width: 25px;
+                height: 25px;
+                left: 15px;
+            }
+
+            &__input {
+                font-size: 1.1rem;
+                padding: 1.25rem 3.5rem;
+            }
+
+            .new-container {
+                padding: 1.25rem;
+            }
+
+            &__add-new-task {
+                padding: 1.31rem;
+            }
+
+            &__todo-list-item {
+                padding: 1.25rem;
+                font-size: 1.1rem;
+
+                &:hover>.main__icon-cross {
+                    display: block;
+                }
+            }
+
+            &__icon-cross {
+                cursor: pointer;
+                display: none;
+            }
+
+            &__todo-list-checkbox {
+                @include checkbox-appearance();
+                width: 25px;
+                height: 25px;
+            }
+
+            &__todo-left-n-clear {
+                background-color: $White;
+                color: $Grey;
+                font-size: .9rem;
+                padding: 1rem 1.3rem;
+            }
+
+            &__all-active-completed {
+                position: absolute;
+                justify-self: center;
+                bottom: 1.2rem;
+                font-size: .9rem;
+                background-color: transparent;
+                box-shadow: none;
+            }
+        }
+    }
+}

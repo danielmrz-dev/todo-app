@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A Todo Web Application">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="src/style.css">
+  <script src="src/script.js" defer></script>
+  <title>Frontend Mentor | Todo app</title>
+</head>
+<body class="grid items-center">
+
+<main class="main mx-5 my-10">
+  
+    <header class="main__header flex justify-between items-center">
+      <h1 class="main__title">Todo</h1>
+      <label for="sun-moon">
+        <img src="images/icon-moon.svg" alt="" class="main__mode-icon w-[20px] cursor-pointer">
+        <input type="checkbox" name="sun-moon" id="sun-moon" class="hidden">
+      </label>
+    </header>
+
+    <div class="main__container grid gap-5 my-6">
+      <form class="main__form relative flex items-center gap-2">
+        <input type="checkbox" name="todo-checkbox" class="main__circle absolute">
+        <input type="text" name="new-todo" id="new-todo" placeholder="Create new todo..." class="main__input w-full rounded p-4">
+      </form>
+
+      <ul class="main__todo-list shadow-md rounded">
+
+        <div class="main__todo-left-n-clear flex justify-between p-4">
+          <p class="main__todo-left"><span class="main__todo-left-number"> </span>items left</p>
+          <p class="main__todo-clear cursor-pointer">Clear Completed</p>
+        </div>
+
+      </ul>
+
+    </div>
+  
+    <div class="main__all-active-completed flex justify-center gap-4 p-4 rounded shadow-md">
+      <span class="main__all cursor-pointer">All</span>
+      <span class="main__active cursor-pointer">Active</span>
+      <span class="main__completed cursor-pointer">Completed</span>
+    </div>
+  
+  
+    <p class="main__drag-n-drop text-center opacity-0">Drag and drop to reorder list</p>
+</main>
+
+  <div class="attribution text-center mb-10 mt-3">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/danielmrz-dev" target="_blank">danielmrz-dev</a>.
+  </div>
+</body>
+</html>
